@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+:root {
+  --white: rgba(255, 255, 255, 1);
+  --black: rgb(10, 10, 10);
+  --black-fonts-headings: rgba(45, 46, 46, 1);
+  --light-grey: rgba(187, 200, 212, 1);
+  --light-grey-input-fiels-forms: rgba(246, 246, 246, 1);
+  --yellow: #f8d254;
+  --white-background: rgba(255, 255, 255, 1);
+  --text-font-weight: 400;
+  --text-font-size: 16px;
+  --text-letter-spacing: 0px;
+  --text-line-height: 22px;
+  --text-font-style: normal;
+  --text-b-font-weight: 600;
+  --text-b-font-size: 16px;
+  --text-b-letter-spacing: 0px;
+  --text-b-line-height: normal;
+  --text-b-font-style: normal;
+  --text-font-family: 'Inter', sans-serif;
+  --text-b-font-family: "Inter-SemiBold", sans-serif;
+
+  --xs:0px;
+  --sm:576px;
+  --md:768px;
+  --lg:992px;
+  --xl:1200px;
+  --xxl:1400px;
+  
+
+}
+
+
+body,html{
+  overflow-x:hidden;
+}
+body{
+  font-family: var(--text-font-family),system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--white-background);
+  background-color: rgb(41, 33, 160);
+}
+
+a,ul,li{
+  text-decoration: none;
+  list-style: none;
+  color: var(--white);
+  
+
+}
+  
