@@ -1,6 +1,7 @@
 .custom-navbar{
     display: flex;
     flex-direction:row;
+    flex-wrap: wrap;
 }
 .logo img{
     max-width:150px ;
@@ -21,17 +22,30 @@
 
 
 }
+
 .humbuger{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     
 }
-.humbuger-btn{
+
+.hamburger-btn{
     border-radius: .25rem;
-    padding:5px 8px;
-    border: 1px solid rgba(0, 0, 0, .5);
-    background: none;
+    color:#fff;
+    padding:5px 10px;
+    border: none;
+    
+    background: transparent;
+}
+
+.hamburger-btn:active{
+    
+    border: 1px solid rgba(255, 255, 255, 0.9)
+}
+.hamburger-btn:hover{
+    
+    border: 1px solid rgba(255, 255, 255, 0.9);
 }
 .mobile-navbar{
     display: none;
@@ -43,21 +57,35 @@
     .mobile-navbar{
         width: 20rem;
         display: block;
-        height: 100%;
+        height: 100vh;
         font-size: 1.25rem;
         padding: 20px 30px;
         inset: 0;
         padding-top: 50px;
+        z-index: 100;
+        color: rgb(24, 24, 24);
         
-        backdrop-filter: blur(10px) ;
+        background-color: rgb(255, 255, 255,0.9);
         transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
         
         
-        backdrop-filter: blur(30%);
+        
     
     }
     .mobile-nav li{
         margin-top: 20px;
+    }
+    .mobile-nav li a{
+       
+        color: rgb(19, 19, 19);
+    
+    
+    }
+    .mobile-nav li a:hover{
+        
+        color: rgba(19, 19, 19, 0.8);
+    
+    
     }
     
     

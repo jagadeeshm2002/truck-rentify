@@ -11,7 +11,10 @@
 
   <!-- css link -->
   <link rel="stylesheet" href="styles/index.css">
-  <link rel="stylesheet" href="styles/styleguide.css">
+  <link rel="stylesheet" href="./styles/common/styleguide.css">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../src/images/turkey.png" type="image/x-icon">
 
 
   <!-- font awesome link -->
@@ -20,54 +23,676 @@
   <title>Truck rentify &middot; Your Trusted Truck Rental Solution </title>
 </head>
 
-<body>
+<section>
+
 
   <!-- start custom navbar -->
-  <!-- <nav id="navbar"></nav> -->
-  <!-- end custom navbar -->
+  <nav id="navbar"
+    style=" background: url(../src/images/magicpattern-mesh-gradient-1702538601715.png), lightgray 50% / cover no-repeat;">
 
+  </nav>
+  <!-- end custom navbar -->
   <!-- hero section -->
   <section>
     <div class="container-fluid hero-section">
-      <div class="box">
-        <div class="hero-section">
-          <div class="overlap-group">
-            <img class="rectangle" src="img/rectangle-80.png" />
-            <div class="ellipse"></div>
-            <img class="star" src="img/star-1.svg" />
-            <div class="truck"><img class="img" src="img/truck-1-1.png" /></div>
-            <p class="heading">
-              <span class="text-wrapper">Discover, book, and </span> <span class="span">rent a truck in easy steps</span>
-            </p>
-            <p class="div">
-              Find the perfect truck for your storage and budget. Enjoy the open road with our reliable and affordable
+      <div class="container position-relative ">
+        <!-- <div class="rectangle position-absolute" ></div>
+        <div class="ellipse position-absolute" ></div> -->
+        <div class=" row pt-5 hero-section-row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <h2 class="heading">
+              Discover, book, and <br class="	 d-none d-md-block d-lg-block"> rent a truck in easy <br
+                class="d-none d-md-block d-lg-block">
+              steps
+            </h2>
+            <p class="div hero-subtext">
+              Find the perfect truck for your storage and budget.<br class="	 d-none d-md-block d-lg-block"> Enjoy the
+              open road with our reliable and affordable
               rental service.
             </p>
             <div class="frame">
-              <img class="line" src="img/line-6.svg" />
-              <div class="frame-2">
-                <div class="chevron-right-wrapper"><img class="chevron-right" src="img/chevron-right.svg" /></div>
-                <div class="text-wrapper-2">book now</div>
+
+              <div class="frame-2  d-flex flex-row align-items-center mt-2">
+                <div href="#cta" class="chevron-right-wrapper bg-white"><svg class="m-0 p-0"
+                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M6.75 13.5001L11.25 9.00012L6.75 4.50012" stroke="black" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></div>
+                <div class="text-wrapper-2 ms-2">book now</div>
               </div>
             </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 truck-contaniner">
+            <div class="truck "><img class="img" src="src/images/Truck - 1 1.png" draggable="false" /></div>
+
           </div>
         </div>
       </div>
     </div>
   </section>
+  <div class="cta bg-transparent container " id="cta">
+    <div class="cta-section ">
+      <div class="select-vehicle  d-flex ">
+        <label for="vehicle"><i class="fa fa-truck"></i>select vehicle</label>
+        <select name="vehicle" id="vehicle">
+          <option>Vehicles</option>
+          <option value="tata">Tata</option>
+          <option value="eicher">eicher</option>
+          <option value="Mahindra">Mahindra</option>
+          <option value="Force">Force</option>
+        </select>
+
+      </div>
+      <div class="pickup-location  d-flex">
+        <label for="vehicle"><i class="fa fa-map-marker"></i>Pickup location</label>
+        <select name="vehicle" id="vehicle" placeholder="Search a location">
+          <option>Search a location</option>
+          <option value="porur">Porur</option>
+          <option value="avadi">Avadi</option>
+          <option value="Guindy">Guindy</option>
+          <option value="prambur">prambur</option>
+        </select>
+      </div>
+      <div class="pickup-date  d-flex">
+        <label for="pickup"><i class="fa far fa-calendar-check"></i>Pick-up date</label>
+        <input type="date" name="pickup-date" id="pickup">
+      </div>
+      <div class="return-date  d-flex">
+        <label for="pickup"><i class="fa far fa-calendar-check"></i>drop-off date</label>
+        <input type="date" name="pickup-date" id="pickup">
+      </div>
+      <div class="booknow-btn  justify-content-center d-flex">
+        <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-whatever="@getbootstrap">Book now <i class="fas fa-arrow-right ms-1"></i></button>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl  ">
+      <div class="modal-content p-3">
+        <div class=" modal-title d-flex row align-items-center justify-content-between  bg-dark py-1 text-light">
+          <h2 class="col-8 m-0">Complete Reservation</h2>
+          <svg class="col-4" data-bs-dismiss="modal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tabler-icon tabler-icon-x">
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </div>
+        <div class="modal-body py-3 bg-light" style="background-color: rgba(0, 0, 0, 0.06);">
+          <h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="tabler-icon tabler-icon-info-circle-filled">
+              <path
+                d="M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm0 9h-1l-.117 .007a1 1 0 0 0 0 1.986l.117 .007v3l.007 .117a1 1 0 0 0 .876 .876l.117 .007h1l.117 -.007a1 1 0 0 0 .876 -.876l.007 -.117l-.007 -.117a1 1 0 0 0 -.764 -.857l-.112 -.02l-.117 -.006v-3l-.007 -.117a1 1 0 0 0 -.876 -.876l-.117 -.007zm.01 -3l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z"
+                fill="currentColor" stroke-width="0"></path>
+            </svg> Upon completing this reservation enquiry, you will receive:</h4>
+          <p>Your rental voucher to produce on arrival at the rental desk and a toll-free customer support number.</p>
+        </div>
+        <div class="booking-modal__car-info row">
+          <div class="dates-div col-12 col-lg-6">
+            <div class="booking-modal__car-info__dates">
+              <h5>Location &amp; Date</h5><span>
+                <div>
+
+                  <h6> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="tabler-icon tabler-icon-map-pin-filled">
+                      <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        fill="currentColor" stroke-width="0"></path>
+                    </svg>Pick-Up Date &amp; Time</h6>
+                  <p class="">2023-12-08 / <input type="time" class="input-time"></p>
+                </div>
+              </span>
+            </div>
+            <div class="booking-modal__car-info__dates "><span>
+                <div>
+                  <h6> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="tabler-icon tabler-icon-map-pin-filled">
+                      <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        fill="currentColor" stroke-width="0"></path>
+                    </svg>Drop-Off Date &amp; Time</h6>
+                  <p>2023-12-06 / <input type="time" class="input-time"></p>
+                </div>
+              </span></div>
+            <div class="booking-modal__car-info__dates"><span>
+                <div>
+                  <h6> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="tabler-icon tabler-icon-map-pin-filled">
+                      <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        fill="currentColor" stroke-width="0"></path>
+                    </svg>Pick-Up Location</h6>
+                  <p>porur</p>
+                </div>
+              </span></div>
+          </div>
+          <div class="booking-modal__car-info__model col-12 col-lg-6">
+            <h5><span>Car -</span> TATA ace h4</h5><img src="../src/data/truck-img-1.png" alt="car_img">
+          </div>
+        </div>
+        <div class="booking-modal__person-info">
+          <h4>Personal Information</h4>
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">First name <b>*</b></label>
+              <input type="text" class="form-control" id="validationCustom01" value="mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Last name <b>*</b></label>
+              <input type="text" class="form-control" id="validationCustom02" value="antony" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Phone</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">+91</span>
+                <input type="tel" class="form-control " id="validationCustomUsername"
+                  aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please enter number.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Address<b>*</b></label>
+              <input type="text" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid address.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">City</label>
+              <input type="text" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="validationCustom05" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                <label class="form-check-label" for="invalidCheck">
+                  Please send me latest news and updates
+                </label>
+
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- rent select section -->
+  <section>
+    <div class="rentsection container-fluid">
+      <div class="rent-section2 container">
+        <div class="rent-brands">
+          <div class="title-rent">
+            <h5>Rent by Brands</h5>
+          </div>
+          <div class="brands-logo">
+            <a href="#">
+              <div class="brand-logo"><img src="src/images/tatalogo.png" alt=""></div>
+              <div class="brand-name">TATA</div>
+            </a>
+            <a href="#">
+              <div class="brand-logo"><img src="src/images/eicherlogo.png" alt=""></div>
+              <div class="brand-name">Eicher</div>
+            </a>
+            <a href="#">
+              <div class="brand-logo"><img src="src/images/forcelogo.png" alt=""></div>
+              <div class="brand-name">Force</div>
+            </a>
+            <a href="#">
+              <div class="brand-logo"><img src="src/images/hindustanlogo.png" alt=""></div>
+              <div class="brand-name">Hindustan</div>
+            </a>
+            <a href="#">
+              <div class="brand-logo"><img src="src/images/leazlogo.png" alt=""></div>
+              <div class="brand-name">Leaz</div>
+            </a>
+            <a href="#">
+              <div class="brand-logo"><img src="src/images/mahindralogo.png" alt=""></div>
+              <div class="brand-name">Mahindra</div>
+            </a>
+          </div>
+        </div>
+        <div class="rent-bodytype">
+          <div class="title-body">
+            <h5>Rent by body type</h5>
+          </div>
+          <div class="body-logos">
+            <a href="#">
+              <div class="truck-logo"><img src="src/images/truck_1.png" alt=""></div>
+            </a>
+            <a href="#">
+              <div class="truck-logo"><img src="src/images/truck_2.png" alt=""></div>
+            </a>
+            <a href="#">
+              <div class="truck-logo"><img src="src/images/truck_3.png" alt=""></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- vehicles -->
+  <section>
+    <div class="truck-section container-fluid py-5" style="background: #0f0f0f06;">
+      <div class="truck-section2 container">
+        <div class="truck-section-heading">
+          <h4 class="text-center fw-bolder">Our Impressive Collection of Trucks</h4>
+          <p class="text-center px-4 mt-3">From robust utility trucks to versatile cargo vans, our carefully curated
+            selection ensures that our customers experience unmatched performance and reliability for all their
+            transportation needs</p>
+          <div
+            class="truck-selection d-flex gap-2 flex-row justify-content-center align-items-center  d-none d-sm-none d-lg-flex">
+            <a href="# " class="active">Popular</a>
+            <a href="">Small Truck</a>
+            <a href="">Large Truck</a>
+            <a href="">Medium Truck</a>
+          </div>
+
+        </div>
+        <div class="truck-section-content mt-5 mx-4">
+          <div class="vehicle-cards row gap-4 justify-content-center ">
+            <div class="card d-felx flex-column ">
+              <div class="card-img">
+                <img src="./src/data/truck-img-1.png" alt="">
+              </div>
+              <div class="card-details">
+                <p class=" m-0 mt-1">TATA Ace HT mini </p>
+                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
+                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
+                <div class="specification d-flex justify-content-around p-1 mb-2">
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">4,000</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Auto</p>
+                  </div>
+
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">2 Person</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Pertol</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="card-rent-btn d-flex">
+                <button type="button" class="card-button py-1">Rent now</button>
+              </div>
+
+            </div>
+            <div class="card d-felx flex-column ">
+              <div class="card-img">
+                <img src="./src/data/vehicle_2.png" alt="">
+              </div>
+              <div class="card-details">
+                <p class=" m-0 mt-1">EICHER 19 </p>
+                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
+                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
+                <div class="specification d-flex justify-content-around p-1 mb-2">
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">4,000</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Auto</p>
+                  </div>
+
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">2 Person</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Pertol</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="card-rent-btn d-flex">
+                <button type="button" class="card-button py-1">Rent now</button>
+              </div>
+
+            </div>
+            <div class="card d-felx flex-column ">
+              <div class="card-img">
+                <img src="./src/data/vehicle_3.png" alt="">
+              </div>
+              <div class="card-details">
+                <p class=" m-0 mt-1">EICHER pro </p>
+                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
+                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
+                <div class="specification d-flex justify-content-around p-1 mb-2">
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">4,000</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Auto</p>
+                  </div>
+
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">2 Person</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Pertol</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="card-rent-btn d-flex">
+                <button type="button" class="card-button py-1">Rent now</button>
+              </div>
+
+            </div>
+            <div class="card d-felx flex-column ">
+              <div class="card-img">
+                <img src="./src/data/vehicle_4.png" alt="">
+              </div>
+              <div class="card-details">
+                <p class=" m-0 mt-1">Container 12*20 </p>
+                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
+                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
+                <div class="specification d-flex justify-content-around p-1 mb-2">
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">4,000</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Auto</p>
+                  </div>
+
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">2 Person</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Pertol</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="card-rent-btn d-flex">
+                <button type="button" class="card-button py-1">Rent now</button>
+              </div>
+
+            </div>
+            <div class="card d-felx flex-column ">
+              <div class="card-img">
+                <img src="./src/data/vehicle_5.png" alt="">
+              </div>
+              <div class="card-details">
+                <p class=" m-0 mt-1">Trailer 12*32 </p>
+                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
+                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
+                <div class="specification d-flex justify-content-around p-1 mb-2">
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">4,000</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Auto</p>
+                  </div>
+
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">2 Person</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Pertol</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="card-rent-btn d-flex">
+                <button type="button" class="card-button py-1">Rent now</button>
+              </div>
+
+            </div>
+            <div class="card d-felx flex-column ">
+              <div class="card-img">
+                <img src="./src/data/vehicle_6.png" alt="">
+              </div>
+              <div class="card-details">
+                <p class=" m-0 mt-1">Refrigerated trailer </p>
+                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
+                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
+                <div class="specification d-flex justify-content-around p-1 mb-2">
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">4,000</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Auto</p>
+                  </div>
+
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
+                    <p class="m-0" style="font-size: small;">2 Person</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
+                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
+                    <p class="m-0" style="font-size: small;">Pertol</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="card-rent-btn d-flex">
+                <button type="button" class="card-button py-1">Rent now</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="all-trucks my-3 d-flex justify-content-center"><a class="btn-outline-dark px-3 py-1"
+            style="border: 1px solid rgba(0, 0, 0, 0.214); border-radius: 20px;" href="#">See all trucks <i
+              class="fas fa-arrow-right"></i></a></div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- how it works -->
+  <section>
+    <div class="container-fluid py-5">
+      <div class="how-works container">
+        <div class="how-works-text">
+          <h2 class="text-center ">How it works</h2>
+          <p class="text-center">Discover the simplicity and reliability of renting our quality trucks through our
+            streamlined process. Effortlessly book and confirm your selected vehicle online for a smooth and dependable
+            experience.</p>
+
+        </div>
+        <div class="how-works-content d-flex flex-column-reverse flex-lg-row justify-content-center  gap-4">
+
+          <div
+            class="key-points d-flex flex-column gap-3 justify-content-center align-items-xl-start align-items-center">
+            <div class="browse d-flex p-2 gap-2">
+              <div class="key-icon p-3 d-flex align-items-center" style="background-color: rgba(0, 0, 0, 0.105);"><i
+                  class="fas fa-search fa-lg"></i></div>
+              <div>
+                <h6>Browse and select</h6>
+                <p>Choose the ideal truck size for your needs and select the rental duration that suits your moving
+                  plans.</p>
+              </div>
+
+            </div>
+            <div class="book d-flex p-2 gap-2">
+              <div class="key-icon p-3 d-flex align-items-center" style="background-color: rgba(0, 0, 0, 0.105);"><i
+                  class="far fa-calendar-check fa-lg"></i></div>
+              <div>
+                <h6>Book and confirm</h6>
+                <p>Easily book your selected truck online through our secure platform, ensuring a confirmed reservation.
+                </p>
+              </div>
+            </div>
+            <div class="smooth d-flex p-2 gap-2">
+              <div class="key-icon p-3 d-flex align-items-center" style="background-color: rgba(0, 0, 0, 0.105);"><i
+                  class="far fa-smile fa-lg"></i></div>
+              <div>
+                <h6>Enjoy a Smooth Move</h6>
+                <p>Collect your rented truck on the scheduled day from our convenient location. Our friendly staff is
+                  ready to assist, ensuring a smooth and stress-free moving experience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="how-works-img ">
+            <div><img src="src/images/how-truck.png" alt=""></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- benefits -->
+  <section>
+    <div class="container-fluid benefits">
+      <div class="container py-5">
+        <h3 class="text-center">Our services & Benefits</h3>
+        <p class="text-center px-lg-5">To make renting easy and hassle-free, we probide a variety of services and
+          andvantages.<br class="d-lg-block d-none"> We have you covered with a variety of vehicles and flexible rental
+          terms.</p>
+        <div class="benefit-points d-flex flex-md-row flex-column gap-5">
+          <div class="benefit-point d-flex justify-content-center align-items-center flex-column">
+            <img src="src/svg/stars-01.svg" alt="" srcset="">
+            <h6 class="text-center">Quality Choice</h6>
+            <p class="text-center">Choode from a varied selection of top-tier trucks, ensuring high-quality options for
+              your spedific needs and preferences</p>
+          </div>
+          <div class="benefit-point d-flex justify-content-center align-items-center flex-column">
+            <img src="src/svg/check-verified-01.svg" alt="" srcset="">
+            <h6 class="text-center">Affordable Prices</h6>
+            <p class="text-center">Our rental rates are highly competitive and affordable, allowing our customers to
+              enjoy their trips without breaking the bank.</p>
+          </div>
+          <div class="benefit-point d-flex justify-content-center align-items-center flex-column">
+            <img src="src/svg/coins-hand.svg" alt="" srcset="">
+            <h6 class="text-center">Convenient Online Booking</h6>
+            <p class="text-center">With our easy-to-use online booking system, customers can quickly and conveniently
+              reserve their rental truck from anywhere, anytime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- testimonials -->
+  <section>
+    <div class="container-fluid my-5">
+      <div class="container">
+        <div class="testimonials-heading pb-5">
+          <h2>What Our Customers Say</h2>
+        </div>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item " data-bs-interval="10000">
+              <div class="slide w-100">
+                <div class="tesimonials-card d-flex flex-column ">
+                  <i class="fas fa-quote-left fa-2xl my-3"></i>
+                  <p class="text-center px-5 w-auto">Choosing Truck rentify simplified our logistics. The platform's
+                    user-friendly interface and extensive truck options made the process seamless. Our deliveries are
+                    now more efficient than ever!</p>
+                  <img src="src/images/user-test.png" alt="">
+                  <p class="tesimonial-name"> ajith</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active" data-bs-interval="2000">
+              <div class=" w-100 slide ">
+                <div class="tesimonials-card d-flex flex-column ">
+                  <i class="fas fa-quote-left fa-2xl my-3"></i>
+                  <p class="text-center px-5 w-auto">I was impressed with the variety of trucks available on truck
+                    rentify. The booking process was straightforward, and the trucks were in excellent condition. A
+                    reliable solution for any business.</p>
+                  <img src="src/images/user-test.png" alt="">
+                  <p class="tesimonial-name"> jagadeesh</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide w-100">
+                <div class="tesimonials-card d-flex flex-column ">
+                  <i class="fas fa-quote-left fa-2xl my-3"></i>
+                  <p class="text-center px-5 w-auto">truck rentify has transformed how we manage our fleet. The
+                    real-time tracking and responsive support have been invaluable. Highly recommended for any company
+                    in need of reliable truck rentals.</p>
+                  <img src="src/images/user-test.png" alt="">
+                  <p class="tesimonial-name"> vijay</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 
   <!-- start custom footer -->
 
   <!----------- Footer ------------>
-  <!-- <footer id="footer" class="footer-1"></footer> -->
+  <footer id="footer" class="footer-1"></footer>
   <!-- end custom footer -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="script/bootstrap.bundle.min.js"></script>
-  <script src="script/index.js"></script>
+
   <script src="script/common/common.js"></script>
 
 
-</body>
+  </body>
 
 </html>

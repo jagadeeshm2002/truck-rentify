@@ -1,7 +1,12 @@
 @import url("./common/styleguide.css");
 @import url("./common/navbar.css");
 @import url("./common/footer.css");
-@import url('hero.css');
+
 @import url('./common/sections.css');
 
 
+.sub-hero {
+    background: url(../src/images/sub-background.png);
+    background-position: center;
+    min-height: 15rem;
+}

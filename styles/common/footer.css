@@ -3,7 +3,7 @@
 ====================== */
 /* top footer */
 .download-app{
-	background-image: url(../src/images/BG.png);
+	background-image: url('../../src/images/BG.png');
 	background-repeat: repeat;
 	display: flex;
 	flex-direction: row;

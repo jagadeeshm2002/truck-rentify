@@ -1,0 +1,34 @@
+@import url("./common/styleguide.css");
+@import url("./common/navbar.css");
+@import url("./common/footer.css");
+
+@import url('./common/sections.css');
+
+
+.sub-hero {
+    background: url(../src/images/sub-background.png);
+    background-position: center;
+    min-height: 15rem;
+}
+
+
+.contact-form-input{
+    max-width:20rem ;
+    
+
+}
+.contact-form-textarea{
+    max-width:40rem ;
+    min-height: 6rem;
+    max-height: 50rem;
+    text-align: start;
+        
+
+}
+.contact-form form input:nth-child(3):placeholder-shown{
+    
+    
+    text-align: start;
+        
+
+}
