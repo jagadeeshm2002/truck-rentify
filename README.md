@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **react,bootstrap**
 
-- 👨‍💻 All of my projects are available at [https://jagadeeshm2002.github.io/portfolio/](https://jagadeeshm2002.github.io/portfolio/)
+- 👨‍💻 All of my projects are available at [Portfolio](https://jagadeeshm2002.github.io/portfolio/)
 
 - 💬 Ask me about **react,js**
 
@@ -27,8 +27,8 @@ Truck Rentify is a web application designed for 🔸Truck Rentify is a platform-
 
 ## Demo
 
--live demo > [truckrentify](https://truck-rentify.vercel.app/)
--design file > [design file](https://www.figma.com/file/eV01reYtHVhIR6KWCdgfEZ/Truck-rentify---truck-rent-platform-website-(Community)?type=design&t=TJqXOYj58CfWFh63-6)
+- **live demo** > [truckrentify](https://truck-rentify.vercel.app/)
+- **design file** > [design file](https://www.figma.com/file/eV01reYtHVhIR6KWCdgfEZ/Truck-rentify---truck-rent-platform-website-(Community)?type=design&t=TJqXOYj58CfWFh63-6)
 
 ## Features
 
