@@ -29,7 +29,7 @@ Truck Rentify is a web application designed for 🔸Truck Rentify is a platform-
 
 - **live demo** > [truckrentify](https://truck-rentify.vercel.app/)
 - **design file** > [design file](https://www.figma.com/file/eV01reYtHVhIR6KWCdgfEZ/Truck-rentify---truck-rent-platform-website-(Community)?type=design&t=TJqXOYj58CfWFh63-6)
-- <img href="https://github.com/jagadeeshm2002/truck-rentify/blob/76744e7b845b3010eb1990a617fee79aa69c5e5f/readme_files/Home.jpg">
+<img algin=center src="https://github.com/jagadeeshm2002/truck-rentify/blob/76744e7b845b3010eb1990a617fee79aa69c5e5f/readme_files/Home.jpg" width=500px>
 
 ## Features
 
