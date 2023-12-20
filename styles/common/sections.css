@@ -52,15 +52,15 @@
 }
 
 .brand-logo {
-    max-width: 50;
-    height: 50;
+    max-width: 60px;
+    height: 40px;
 
 
 }
 
 .brand-logo img {
-    width: 50;
-    height: 50;
+    width: 60px;
+    height: 40px;
 
 
 }
@@ -73,6 +73,63 @@
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+}
+
+@media screen and (max-width:399.8px) {
+
+    .brands-logo,
+    .body-logos {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .title-body h5,
+    .title-rent h5 {
+        font-family: 'poppins', sans-serif;
+        font-weight: 600;
+
+    }
+
+    .brands-logo a,
+    .body-logos a {
+        width: 120px;
+        height: 90px;
+        border-radius: 8px;
+        background: rgba(15, 15, 15, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        flex-shrink: 0;
+    }
+
+    .brands-logo a:hover,
+    .body-logos a:hover {
+        background: rgba(15, 15, 15, 0.07);
+    }
+
+    .brand-logo {
+        max-width: 50px;
+        height: 35px;
+        display: felx;
+        justify-content: center;
+        align-items: flex-end;
+
+
+    }
+
+    .brand-logo img {
+        max-width: 40px;
+        max-height: 35px;
+
+
+    }
+
+
 }
 
 /* truck section start */
@@ -198,6 +255,14 @@
     position: relative;
     left: 100px;
 }
+@media screen and (max-width:399.8px) {
+    .how-works-img img {
+        min-width: 20rem;
+        max-width: 35rem;
+        position: relative;
+        left: 100px;
+    }
+}
 
 @media screen and (max-width:977.8px) {
     .how-works-img {
@@ -232,7 +297,7 @@
 
 
 /* testimoinals */
-.tesimonials-card{
+.tesimonials-card {
     background-color: #53c8ff1a;
     border-radius: 25px;
     max-width: 40rem;
@@ -240,47 +305,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.slide{
-    
+
+.slide {
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
- 
 
-.tesimonials-card img{
+
+.tesimonials-card img {
     width: 60px;
-    
+
 }
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
     background-color: rgba(0, 0, 0, 0.3);
-   
+
     border-radius: 40%;
 
-    
+
 }
 
 
 /* services and benifits */
 
-.benefits{
+.benefits {
     background-image: url(../../src/images/BG.png);
-	background-repeat: repeat;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
-    color:white ;
-    
-	
-	box-sizing: border-box;
-	justify-content: center;
-	align-items: center;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;
+
+
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
-.benefit-point img{
+
+.benefit-point img {
     padding: 10px;
     background-color: aliceblue;
     border-radius: 30px;

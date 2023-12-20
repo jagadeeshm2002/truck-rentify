@@ -38,7 +38,8 @@ const headerHTML = `<div class="custom-navbar py-3">
 </div>
 
 `
-const footerHTML = `<div class="container-fluid download-app py-3 " style="height:15rem;">
+const footerHTML = `<div class="container-fluid download-app py-3 ">
+<div class="container">
 <div class="row download gap-3 px-3 ">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center flex-column  " ><h5 class="text-sm-center text-md-center text-start ">Download our mobile app✨</h5>
 <p class="text-center text-lg-start">Get exclusive access to car rentals with our app. <br class="d-none d-xl-block d-lg-block d-md-block">
@@ -48,7 +49,7 @@ const footerHTML = `<div class="container-fluid download-app py-3 " style="heigh
   <img  class="download-btn" src="../src/images/Buttons.png" alt="">
 
 </div>
-</div></div>
+</div></div></div>
 <div class="main-footer widgets-dark typo-light">
 <div class="container">
   <div class="row flex-wrap">

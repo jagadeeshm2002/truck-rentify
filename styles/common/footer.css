@@ -51,6 +51,29 @@
 	width: 20rem;
 }
 
+@media  screen and (max-width:399.8px) {
+
+	.download-app{
+		max-width: 100%;
+	}
+	.download-app .download div h5 {
+		font-family: 'Inter', sans-serif;
+		color: rgb(240, 240, 240);
+		font-weight: 600;
+		font-size: 26px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.download-app .download div  p {
+		font-family: 'Inter', sans-serif;
+		color: rgba(255, 255, 255, 0.859);
+		font-size: 16px;
+	
+	}
+
+}
+
+
 
 
 /* Main Footer */

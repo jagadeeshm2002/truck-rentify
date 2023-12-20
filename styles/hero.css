@@ -127,44 +127,6 @@ label i{
 
 
 
-
-
-
-
-
-
-
-
-@media screen and (max-width:499.8px) {
-  .truck{
-    position: absolute;
-    inset: -50px 0 0 -100px;
-    z-index: 5;
-    
-    
-  }
-  .truck .img{
-    width: 600px;
-    
-  }
-  section .hero-section{
-    min-height: 80vh;
-  }
-  .cta{
-    max-width: 80%;
-    
-    box-sizing: border-box;
-  }
-  .cta-section{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 1rem;
-    row-gap: 1rem;
-    box-sizing: border-box;
-  }
- 
-  
-}
 @media screen and (max-width:991.8px) {
   .truck{
     position: absolute;
@@ -200,4 +162,90 @@ label i{
 
   
   
+}
+
+
+
+
+
+
+
+@media screen and (max-width:499.8px) {
+  .truck{
+    position: absolute;
+    inset: -50px 0 0 -100px;
+    z-index: 5;
+    
+    
+  }
+  .truck .img{
+    width: 700px;
+    
+  }
+  section .hero-section{
+    min-height: 80vh;
+  }
+  .cta{
+    max-width: 80%;
+    
+    
+    box-sizing: border-box;
+  }
+  .cta-section{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    row-gap: 1rem;
+    box-sizing: border-box;
+    top: -250px;
+  }
+  .hero-section{
+    margin-bottom: 150px;
+  }
+ 
+  
+}
+@media screen and (max-width:399.8px) {
+  .truck{
+    position: absolute;
+    inset: 0 0 0 -100px;
+    z-index: 5;
+    
+    
+  }
+  .hero-section-row .heading{
+    font-size: 38px;
+  }
+  .hero-section-row .hero-subtext{
+    font-size: 14px;
+  }
+
+  .truck .img{
+    width: 600px;
+    
+  }
+  section .hero-section{
+    min-height: 85vh;
+  }
+  .cta{
+    width: 100%;
+    
+    
+    box-sizing: border-box;
+  }
+  .cta-section{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    row-gap: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    top: -90  px;
+    
+    
+  }
+ 
+  .hero-section{
+    margin-bottom: 150px;
+  }
 }
