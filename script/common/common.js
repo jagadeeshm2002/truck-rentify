@@ -120,41 +120,97 @@ document.querySelector("#navbar").innerHTML += headerHTML;
 document.querySelector('#footer').innerHTML += footerHTML;
 
 (function mainScript() {
-    "use strict";
-    const offcanvasToggle = document.querySelector(
-      '[data-bs-toggle="offcanvas"]'
-    );
-    const offcanvasCollapse = document.querySelector(".offcanvas-collapse");
-    offcanvasToggle.addEventListener("click", function () {
-      offcanvasCollapse.classList.toggle("open");
+  "use strict";
+  const offcanvasToggle = document.querySelector(
+    '[data-bs-toggle="offcanvas"]'
+  );
+  const offcanvasCollapse = document.querySelector(".offcanvas-collapse");
+  offcanvasToggle.addEventListener("click", function () {
+    offcanvasCollapse.classList.toggle("open");
+  });
+})();
+
+
+
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Assuming your form has an ID of 'booking-form'
+//   const form = document.querySelector('.needs-validation');
+//   let modal = new bootstrap.Modal(document.getElementById('formModal'));
+
+//   form.addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevents the default form submission behavior
+
+//     // Get values from form fields
+//     const selectedVehicle = document.getElementById('vehicle').value;
+//     const pickupLocation = document.getElementById('pickup-location').value;
+//     const pickupDate = document.getElementById('pickup-date').value;
+//     const returnDate = document.getElementById('return-date').value;
+
+//     document.getElementById('model-pickup-date').innerText = pickupDate;
+//     document.getElementById('model-drop-date').innerText = returnDate;
+//     document.getElementById('model-pickup-location').innerText = pickupLocation;
+//     document.getElementById('model-vehicle-name').innerText = selectedVehicle;
+
+   
+    
+
+//     // You can now use the 'bookingDetails' object as needed, for example, send it to a server or perform other actions.
+//     modal.show()
+//     // Clear the form fields if needed
+//     form.reset();
+    
+//   });
+// });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('booking-form');
+
+    form.addEventListener('submit', function (event) {
+      if (form.checkValidity()) {
+        // If the form is valid, prevent the default form submission
+        event.preventDefault();
+
+        const selectedVehicle = document.getElementById('vehicle').value;
+        const pickupLocation = document.getElementById('pickup-location').value;
+        const pickupDate = document.getElementById('pickup-date').value;
+        const returnDate = document.getElementById('return-date').value;
+    
+        document.getElementById('model-pickup-date').innerText = pickupDate;
+        document.getElementById('model-drop-date').innerText = returnDate;
+        document.getElementById('model-pickup-location').innerText = pickupLocation;
+        document.getElementById('model-vehicle-name').innerText = selectedVehicle;
+    
+
+        // Display the modal
+        const modal = new bootstrap.Modal(document.getElementById('formModal'));
+        modal.show();
+
+        // Reset the form if needed
+        form.reset();
+      } else {
+        // If the form is not valid, let it proceed with the default behavior (showing validation errors)
+        form.classList.add('was-validated');
+      }
     });
-  })();
-  
+  });
 
-
-  (function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
-
-  var myModal = document.getElementById('submitModal')
-var myInput = document.getElementById('submitModel')
-
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})

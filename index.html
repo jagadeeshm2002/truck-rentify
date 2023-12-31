@@ -71,52 +71,61 @@
     </div>
   </section>
   <div class="cta bg-transparent container w-100 " id="cta">
-    <div class="cta-section ">
-      <div class="select-vehicle  d-flex ">
-        <label for="vehicle"><i class="fa fa-truck"></i>select vehicle</label>
-        <select name="vehicle" id="vehicle">
-          <option>Vehicles</option>
-          <option value="tata">Tata</option>
-          <option value="eicher">eicher</option>
-          <option value="Mahindra">Mahindra</option>
-          <option value="Force">Force</option>
-        </select>
-
-      </div>
-      <div class="pickup-location  d-flex">
-        <label for="vehicle"><i class="fa fa-map-marker"></i>Pickup location</label>
-        <select name="vehicle" id="vehicle" placeholder="Search a location">
-          <option>Search a location</option>
-          <option value="porur">Porur</option>
-          <option value="avadi">Avadi</option>
-          <option value="Guindy">Guindy</option>
-          <option value="prambur">prambur</option>
-        </select>
-      </div>
-      <div class="pickup-date  d-flex">
-        <label for="pickup"><i class="fa far fa-calendar-check"></i>Pick-up date</label>
-        <input type="date" name="pickup-date" id="pickup">
-      </div>
-      <div class="return-date  d-flex">
-        <label for="pickup"><i class="fa far fa-calendar-check"></i>drop-off date</label>
-        <input type="date" name="pickup-date" id="pickup">
-      </div>
-      <div class="booknow-btn  justify-content-center d-flex">
-        <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          data-bs-whatever="@getbootstrap">Book now <i class="fas fa-arrow-right ms-1"></i></button>
-      </div>
-    </div>
+    
+    
+      <form id="booking-form" class="cta-section needs-validation" novalidate>
+        <div class="select-vehicle d-flex">
+          <label for="vehicle"><i class="fa fa-truck"></i>Select vehicle</label>
+          <select name="vehicle" id="vehicle" class="form-select" required>
+            <option value="" disabled selected>Select a vehicle</option>
+            <option value="TATA Ace">TATA Ace</option>
+            <option value="EICHER 19">EICHER 19</option>
+            <option value="Trailer 12*32">Trailer 12*32</option>
+            <option value="Container 12*20">Container 12*20</option>
+          </select>
+          
+        </div>
+        <div class="pickup-location d-flex">
+          <label for="pickup-location"><i class="fa fa-map-marker"></i>Pickup location</label>
+          <select name="pickup-location" id="pickup-location" class="form-select" placeholder="Search a location" required>
+            <option value="" disabled selected>Select a location</option>
+            <option value="Porur">Porur</option>
+            <option value="Avadi">Avadi</option>
+            <option value="Guindy">Guindy</option>
+            <option value="Prambur">Prambur</option>
+          </select>
+          
+        </div>
+        <div class="pickup-date d-flex">
+          <label for="pickup-date"><i class="fa far fa-calendar-check"></i>Pick-up date</label>
+          <input type="date" name="pickup-date" id="pickup-date" class="form-control" required>
+          
+        </div>
+        <div class="return-date d-flex">
+          <label for="return-date"><i class="fa far fa-calendar-check"></i>Drop-off date</label>
+          <input type="date" name="return-date" id="return-date" class="form-control" required>
+          
+        </div>
+        <div class="booknow-btn justify-content-center d-flex">
+          <button class="btn js-booknow" type="submit" data-bs-toggle="modal" data-bs-target="#formModel"
+            data-bs-whatever="@getbootstrap">Book now <i class="fas fa-arrow-right ms-1"></i></button>
+        </div>
+      </form>
+    
+    
+    
+    
+    
 
   </div>
-  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade " id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl  ">
       <div class="modal-content p-3">
         <div class=" modal-title d-flex row align-items-center justify-content-between  bg-dark py-1 text-light">
           <h2 class="col-8 m-0">Complete Reservation</h2>
-          <svg class="col-4" data-bs-dismiss="modal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="tabler-icon tabler-icon-x">
+          <svg class="col-4" data-bs-dismiss="modal" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="tabler-icon tabler-icon-x">
             <path d="M18 6l-12 12"></path>
             <path d="M6 6l12 12"></path>
           </svg>
@@ -144,7 +153,7 @@
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
                         fill="currentColor" stroke-width="0"></path>
                     </svg>Pick-Up Date &amp; Time</h6>
-                  <p class="">2023-12-08 / <input type="time" class="input-time"></p>
+                  <p class=""><span   id="model-pickup-date">2023-12-08 </span>/ <input type="time" class="input-time"></p>
                 </div>
               </span>
             </div>
@@ -157,7 +166,7 @@
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
                         fill="currentColor" stroke-width="0"></path>
                     </svg>Drop-Off Date &amp; Time</h6>
-                  <p>2023-12-06 / <input type="time" class="input-time"></p>
+                  <p><span id="model-drop-date">2023-12-06</span> / <input type="time" class="input-time"></p>
                 </div>
               </span></div>
             <div class="booking-modal__car-info__dates"><span>
@@ -169,12 +178,12 @@
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
                         fill="currentColor" stroke-width="0"></path>
                     </svg>Pick-Up Location</h6>
-                  <p>porur</p>
+                  <p><span id="model-pickup-location">porur</span></p>
                 </div>
               </span></div>
           </div>
           <div class="booking-modal__car-info__model col-12 col-lg-6">
-            <h5><span>Car -</span> TATA ace h4</h5><img src="../src/data/truck-img-1.png" alt="car_img">
+            <h5><span>Truck -</span> <span id="model-vehicle-name">TATA ace h4</span></h5><img src="../src/data/truck-img-1.png" alt="car_img">
           </div>
         </div>
         <div class="booking-modal__person-info">
@@ -319,211 +328,8 @@
 
         </div>
         <div class="truck-section-content mt-5 mx-4">
-          <div class="vehicle-cards row gap-4 justify-content-center ">
-            <div class="card d-felx flex-column ">
-              <div class="card-img">
-                <img src="./src/data/truck-img-1.png" alt="">
-              </div>
-              <div class="card-details">
-                <p class=" m-0 mt-1">TATA Ace HT mini </p>
-                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
-                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
-                <div class="specification d-flex justify-content-around p-1 mb-2">
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">4,000</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Auto</p>
-                  </div>
+          <div class="vehicle-cards row gap-4 justify-content-center js-vehicle-cards ">
 
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">2 Person</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Pertol</p>
-                  </div>
-
-                </div>
-              </div>
-              <div class="card-rent-btn d-flex">
-                <button type="button" class="card-button py-1">Rent now</button>
-              </div>
-
-            </div>
-            <div class="card d-felx flex-column ">
-              <div class="card-img">
-                <img src="./src/data/vehicle_2.png" alt="">
-              </div>
-              <div class="card-details">
-                <p class=" m-0 mt-1">EICHER 19 </p>
-                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
-                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
-                <div class="specification d-flex justify-content-around p-1 mb-2">
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">4,000</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Auto</p>
-                  </div>
-
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">2 Person</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Pertol</p>
-                  </div>
-
-                </div>
-              </div>
-              <div class="card-rent-btn d-flex">
-                <button type="button" class="card-button py-1">Rent now</button>
-              </div>
-
-            </div>
-            <div class="card d-felx flex-column ">
-              <div class="card-img">
-                <img src="./src/data/vehicle_3.png" alt="">
-              </div>
-              <div class="card-details">
-                <p class=" m-0 mt-1">EICHER pro </p>
-                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
-                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
-                <div class="specification d-flex justify-content-around p-1 mb-2">
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">4,000</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Auto</p>
-                  </div>
-
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">2 Person</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Pertol</p>
-                  </div>
-
-                </div>
-              </div>
-              <div class="card-rent-btn d-flex">
-                <button type="button" class="card-button py-1">Rent now</button>
-              </div>
-
-            </div>
-            <div class="card d-felx flex-column ">
-              <div class="card-img">
-                <img src="./src/data/vehicle_4.png" alt="">
-              </div>
-              <div class="card-details">
-                <p class=" m-0 mt-1">Container 12*20 </p>
-                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
-                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
-                <div class="specification d-flex justify-content-around p-1 mb-2">
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">4,000</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Auto</p>
-                  </div>
-
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">2 Person</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Pertol</p>
-                  </div>
-
-                </div>
-              </div>
-              <div class="card-rent-btn d-flex">
-                <button type="button" class="card-button py-1">Rent now</button>
-              </div>
-
-            </div>
-            <div class="card d-felx flex-column ">
-              <div class="card-img">
-                <img src="./src/data/vehicle_5.png" alt="">
-              </div>
-              <div class="card-details">
-                <p class=" m-0 mt-1">Trailer 12*32 </p>
-                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
-                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
-                <div class="specification d-flex justify-content-around p-1 mb-2">
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">4,000</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Auto</p>
-                  </div>
-
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">2 Person</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Pertol</p>
-                  </div>
-
-                </div>
-              </div>
-              <div class="card-rent-btn d-flex">
-                <button type="button" class="card-button py-1">Rent now</button>
-              </div>
-
-            </div>
-            <div class="card d-felx flex-column ">
-              <div class="card-img">
-                <img src="./src/data/vehicle_6.png" alt="">
-              </div>
-              <div class="card-details">
-                <p class=" m-0 mt-1">Refrigerated trailer </p>
-                <p class="fw-bolder fs-5 m-0 mb-2">1000<span class="font-monospace "
-                    style="font-size:small; color: rgb(105, 93, 93);">/day</span></p>
-                <div class="specification d-flex justify-content-around p-1 mb-2">
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/speedometer-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">4,000</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/manual-gearbox.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Auto</p>
-                  </div>
-
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/users-01.svg" alt="">
-                    <p class="m-0" style="font-size: small;">2 Person</p>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-1 m-0"> <img class=""
-                      style="width: 18px;" src="src/svg/gas-station.svg" alt="">
-                    <p class="m-0" style="font-size: small;">Pertol</p>
-                  </div>
-
-                </div>
-              </div>
-              <div class="card-rent-btn d-flex">
-                <button type="button" class="card-button py-1">Rent now</button>
-              </div>
-
-            </div>
           </div>
         </div>
 
@@ -691,6 +497,8 @@
   <script src="script/bootstrap.bundle.min.js"></script>
 
   <script src="script/common/common.js"></script>
+  <script type="module" src="script/products.js"></script>
+  <script src="script/cart.js"></script>
 
 
   </body>
